@@ -1,0 +1,130 @@
+{
+  "negocio": {
+    "nome": "Amilton Eletricista",
+    "nome_completo": "Amilton Vargas Pereira",
+    "whatsapp": "+5554981517397",
+    "whatsapp_display": "(54) 8151-7397",
+    "whatsapp_mensagem": "Olá, Amilton! Vi seu site e gostaria de um orçamento.",
+    "cidade_principal": "Caxias do Sul",
+    "estado": "RS",
+    "cidades_atendidas": [
+      "Caxias do Sul",
+      "São Marcos",
+      "Farroupilha",
+      "Flores da Cunha"
+    ],
+    "horario": {
+      "semana": "Horário comercial",
+      "sabado": "Somente durante o dia",
+      "feriados": true,
+      "emergencias": false
+    },
+    "emite_nota_fiscal": true
+  },
+
+  "profissional": {
+    "anos_experiencia": 10,
+    "clientes_atendidos": "mais de 100",
+    "servicos_realizados": "mais de 100",
+    "certificacoes": ["Certificado de curso de eletricista"],
+    "tipos_imoveis_atendidos": ["Residências", "Salas comerciais", "Chácaras"]
+  },
+
+  "servicos": [
+    {
+      "id": "instalacao_residencial",
+      "nome": "Instalações residenciais",
+      "descricao": "Instalações elétricas completas para casas e apartamentos."
+    },
+    {
+      "id": "instalacao_comercial",
+      "nome": "Instalações comerciais",
+      "descricao": "Elétrica para lojas, escritórios e salas comerciais."
+    },
+    {
+      "id": "luminarias",
+      "nome": "Luminárias e iluminação",
+      "descricao": "Instalação de luminárias, lâmpadas LED, spots e arandelas."
+    },
+    {
+      "id": "fotocélula",
+      "nome": "Fotocélula e sensores",
+      "descricao": "Instalação de fotocélulas, sensores de presença e movimento."
+    },
+    {
+      "id": "tomadas_interruptores",
+      "nome": "Tomadas e interruptores",
+      "descricao": "Troca e instalação de tomadas e interruptores."
+    },
+    {
+      "id": "quadro_eletrico",
+      "nome": "Quadro elétrico e disjuntores",
+      "descricao": "Instalação e troca de quadros de distribuição e disjuntores."
+    },
+    {
+      "id": "fiacao",
+      "nome": "Fiação e cabeamento",
+      "descricao": "Passagem de cabos, quintagem e organização elétrica."
+    },
+    {
+      "id": "chuveiro",
+      "nome": "Chuveiro elétrico",
+      "descricao": "Instalação segura com fiação adequada para a potência."
+    },
+    {
+      "id": "aterramento",
+      "nome": "Aterramento elétrico",
+      "descricao": "Proteção contra descargas e segurança para o imóvel."
+    },
+    {
+      "id": "cameras_alarme",
+      "nome": "Câmeras e alarmes",
+      "descricao": "Instalação de sistemas de segurança e CFTV."
+    },
+    {
+      "id": "manutencao",
+      "nome": "Manutenção e reparos",
+      "descricao": "Diagnóstico e reparo de curtos, falhas e problemas elétricos."
+    }
+  ],
+
+  "diferenciais": [
+    {
+      "titulo": "Preço justo",
+      "descricao": "Orçamento claro, sem surpresas. Você sabe quanto vai pagar antes de começar."
+    },
+    {
+      "titulo": "Garantia de qualidade",
+      "descricao": "Trabalho feito com capricho e responsabilidade."
+    },
+    {
+      "titulo": "Nota fiscal",
+      "descricao": "Emissão de nota fiscal em todos os serviços."
+    },
+    {
+      "titulo": "Seriedade e honestidade",
+      "descricao": "8 anos construídos na base da confiança e do respeito ao cliente."
+    },
+    {
+      "titulo": "Atende feriados",
+      "descricao": "Disponível em feriados e sábados durante o dia."
+    }
+  ],
+
+  "seo": {
+    "titulo": "Amilton Eletricista em Caxias do Sul | Orçamento pelo WhatsApp",
+    "descricao": "Eletricista em Caxias do Sul com 8 anos de experiência. Instalações residenciais e comerciais, iluminação, tomadas e quadros elétricos. Preço justo, nota fiscal e garantia. Chame no WhatsApp!",
+    "palavras_chave": [
+      "eletricista caxias do sul",
+      "eletricista são marcos rs",
+      "eletricista farroupilha",
+      "eletricista flores da cunha",
+      "instalação elétrica caxias do sul",
+      "eletricista residencial caxias do sul",
+      "quadro elétrico caxias do sul",
+      "troca de disjuntor caxias do sul",
+      "instalação de tomada caxias do sul",
+      "eletricista chácara caxias do sul"
+    ]
+  }
+}
