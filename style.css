@@ -234,258 +234,79 @@ section { padding: clamp(3rem, 6vw, 5.5rem) 0; }
 }
 
 /* ==========================================================
-   Trust strip — compact proof bar under the hero
-   ========================================================== */
-.trust-strip {
-  background: var(--ink);
-  color: #fff;
-}
-.trust-strip-inner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.75rem;
-  padding-top: 0.9rem;
-  padding-bottom: 0.9rem;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.01em;
-  color: #C9C7BB;
-}
-.trust-strip-inner strong {
-  color: var(--warn-yellow);
-  font-weight: 600;
-}
-
-/* ==========================================================
-   Painel — breaker-strip in-page nav (signature element)
-   ========================================================== */
-.painel {
-  background: var(--bg-alt);
-  border-bottom: 1px solid var(--border-strong);
-  padding: 1.5rem 0;
-}
-.painel-label { color: var(--text-muted); margin-bottom: 1rem; }
-
-.painel-strip {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.6rem;
-  background: var(--ink);
-  border: 1px solid #000;
-  border-radius: 6px;
-  padding: 0.7rem;
-  box-shadow: var(--shadow-soft);
-}
-@media (min-width: 700px) {
-  .painel-strip { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-}
-
-.painel-strip li a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 0.4rem 0.6rem;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.02em;
-  color: #C9C7BB;
-  text-align: center;
-  border-radius: 4px;
-  transition: background 0.15s ease, color 0.15s ease;
-}
-.painel-strip li a:hover,
-.painel-strip li a:focus-visible {
-  background: rgba(255, 255, 255, 0.06);
-  color: #fff;
-}
-
-.breaker-toggle {
-  width: 1.1rem;
-  height: 1.6rem;
-  border-radius: 2px;
-  background: linear-gradient(180deg, #4574B8, var(--breaker-blue-deep));
-  border: 1px solid #0E2C50;
-  position: relative;
-  transition: transform 0.25s ease, background 0.25s ease;
-}
-.breaker-toggle::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 6px;
-  background: #C9DAF0;
-}
-.painel-strip li a.is-active .breaker-toggle {
-  transform: translateY(2px);
-  background: linear-gradient(180deg, var(--warn-yellow), #B5860F);
-  border-color: #7A5C0A;
-}
-
-/* ==========================================================
-   Serviços — panel-directory schema instead of card grid
+   Serviços — linhas limpas, um serviço por linha
    ========================================================== */
 .servicos { background: var(--bg); }
 
-.servicos-schema {
+.servicos-list {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
-.circuito {
+.servico-row {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.75rem;
-  padding: 1.75rem 0;
+  gap: 0.35rem;
+  padding: 1.4rem 0;
   border-top: 1px solid var(--border);
-  scroll-margin-top: 6rem;
 }
-.circuito:last-child { border-bottom: 1px solid var(--border); }
+.servico-row:last-child { border-bottom: 1px solid var(--border); }
 
 @media (min-width: 780px) {
-  .circuito { grid-template-columns: 11rem 1fr; gap: 2rem; align-items: start; }
+  .servico-row { grid-template-columns: 14rem 1fr; gap: 2rem; align-items: baseline; }
 }
 
-.circuito-tag {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--breaker-blue);
-  letter-spacing: 0.02em;
-  margin: 0;
-  padding-top: 0.2rem;
-}
-
-.circuito-lista {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.4rem 2rem;
-}
-@media (min-width: 560px) {
-  .circuito-lista { grid-template-columns: repeat(2, 1fr); }
-}
-.circuito-lista h3 { margin-bottom: 0.35rem; }
-.circuito-lista p { color: var(--text-muted); font-size: 0.92rem; }
+.servico-row h3 { margin: 0; }
+.servico-row p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
 
 /* ==========================================================
-   Trabalhos / slider
+   Trabalhos — grade de fotos
    ========================================================== */
 .trabalhos { background: var(--bg-alt); }
 
-.slider {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-.slider-track {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1rem;
-  padding-bottom: 0.5rem;
-  scrollbar-width: none;
 }
-.slider-track::-webkit-scrollbar { display: none; }
+@media (min-width: 640px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
 
-.slide {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
-  border: 1px solid var(--border-strong);
+.gallery-photo {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   border-radius: 6px;
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-}
-@media (min-width: 700px) {
-  .slide { flex-basis: calc(50% - 0.5rem); }
-}
-.slide img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
-
-.slider-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-}
-.slider-btn {
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 50%;
   border: 1px solid var(--border-strong);
-  background: var(--card);
-  font-size: 1.4rem;
-  line-height: 1;
-  color: var(--ink);
-  cursor: pointer;
-  transition: background 0.15s ease, transform 0.15s ease;
+  display: block;
 }
-.slider-btn:hover { background: var(--bg-alt); transform: translateY(-1px); }
-
-.slider-dots { display: flex; gap: 0.5rem; }
-.slider-dots button {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  border: none;
-  background: var(--border-strong);
-  cursor: pointer;
-  padding: 0;
-}
-.slider-dots button.is-active { background: var(--breaker-blue); }
 
 /* ==========================================================
    Diferenciais
    ========================================================== */
 .diferenciais { background: var(--bg); }
-.diferenciais-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2.5rem;
-  align-items: center;
-}
-@media (min-width: 900px) {
-  .diferenciais-grid { grid-template-columns: 0.8fr 1.2fr; gap: 3.5rem; }
-}
 
-.photo-frame {
-  border: 1px solid var(--border-strong);
-  box-shadow: var(--shadow-soft);
-  border-radius: 6px;
-  overflow: hidden;
-  position: relative;
-}
-.photo-frame img { object-fit: cover; width: 100%; aspect-ratio: 4 / 5; }
-
-.diferenciais-list { display: flex; flex-direction: column; gap: 0; }
-.diferenciais-list > div {
+.diferenciais-list { display: flex; flex-direction: column; max-width: 640px; }
+.diff-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
   padding: 1.1rem 0;
   border-top: 1px solid var(--border);
 }
-.diferenciais-list > div:last-child { border-bottom: 1px solid var(--border); }
-.diferenciais-list dt {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 1rem;
-}
-.diferenciais-list dd {
-  margin: 0.35rem 0 0 1.65rem;
-  color: var(--text-muted);
-  font-size: 0.92rem;
-}
-.wire-mark {
+.diff-row:last-child { border-bottom: 1px solid var(--border); }
+.diff-row h3 { margin: 0 0 0.3rem; font-size: 1rem; }
+.diff-row p { margin: 0; color: var(--text-muted); font-size: 0.92rem; }
+
+.diff-dot {
   flex-shrink: 0;
-  width: 0.9rem;
-  height: 0.9rem;
+  width: 1.1rem;
+  height: 1.1rem;
   border-radius: 50%;
-  background: var(--phase-red);
-  border: 2px solid var(--card);
-  box-shadow: 0 0 0 1px var(--border-strong);
+  background: var(--breaker-blue);
+  margin-top: 0.2rem;
 }
 
 /* ==========================================================
@@ -502,28 +323,13 @@ section { padding: clamp(3rem, 6vw, 5.5rem) 0; }
   .info-grid-inner { grid-template-columns: 1fr 1fr; gap: 3rem; }
 }
 
-.horario-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
-  margin: 0;
-  background: var(--border-strong);
-  border: 1px solid var(--border-strong);
+.info-line {
+  font-size: 0.95rem;
+  margin: 0 0 0.4rem;
+  color: var(--ink-soft);
 }
-.horario-list > div {
-  background: var(--card);
-  padding: 1rem 1.1rem;
-}
-.horario-list dt {
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  color: var(--breaker-blue);
-  margin-bottom: 0.35rem;
-}
-.horario-list dd { margin: 0; font-weight: 600; }
+.info-line:last-child { margin-bottom: 0; }
+.info-line strong { color: var(--ink); }
 
 .cidades-list {
   display: flex;
