@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://abimaelpereira.github.io/amilton-eletricista/sitemap.xml
+Sitemap: https://amilton-eletricista.github.io/site/sitemap.xml
